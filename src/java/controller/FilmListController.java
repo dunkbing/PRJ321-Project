@@ -36,9 +36,9 @@ public class FilmListController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         FilmDAO filmDAO = new FilmDAO();
-        List<Film> films = filmDAO.getFilmList();
+        List<Film> films = filmDAO.getFilmList("select top 4 * from film");
         request.setAttribute("filmlist", films);
-        request.getRequestDispatcher("html/header.jsp").forward(request, response);
+        request.getRequestDispatcher("html/home.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

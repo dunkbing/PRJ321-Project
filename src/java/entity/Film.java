@@ -19,11 +19,13 @@ public class Film {
     private int budget;
     private boolean type;
     private String imagePath;
+    private String description;
+    private int duration;
 
     public Film() {
     }
 
-    public Film(int filmId, String title, int releaseYear, String country, String language, int gross, int budget, boolean type, String imagePath) {
+    public Film(int filmId, String title, int releaseYear, String country, String language, int gross, int budget, boolean type, String imagePath, String description, int duration) {
         this.filmId = filmId;
         this.title = title;
         this.releaseYear = releaseYear;
@@ -33,7 +35,29 @@ public class Film {
         this.budget = budget;
         this.type = type;
         this.imagePath = imagePath;
+        this.description = description;
+        this.duration = duration;
     }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    
 
     public int getFilmId() {
         return filmId;
