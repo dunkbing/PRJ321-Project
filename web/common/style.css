@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 31, 2019, 11:27:37 PM
+    Author     : dangb
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+.login-panel{
+    width: 320px;
+    height: 520px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+
+.logo{
+    text-align: center
+}
+
+.login-panel p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.login-panel input{
+    width: 100%;
+    margin-bottom: 20px;    
+}
+
+.login-panel input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-panel input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.login-panel input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #fff;
+}
+
+.login-panel a{
+    text-decoration: none;
+    font-size: 16px;
+    color: darkgray;
+    line-height: 20px;
+}
+
+.login-panel a:hover{
+    color: #ffc107;
+}

@@ -19,9 +19,9 @@
             List<Actor> actors = (List<Actor>)request.getAttribute("actors");
             List<String> directors = (List<String>)request.getAttribute("directors");
             List<Review> reviews = (List<Review>) request.getAttribute("reviews");
+            
         %>
         <title><%=f.getTitle()%></title>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <style>
             p{
                 margin: 0;
@@ -52,8 +52,8 @@
                             ${a.name},
                         </c:forEach>
                     </p>
-                    <p>Budget: $<%=f.getBudget()%>,000,000</p>
-                    <p>Gross: $<%=f.getGross()%>,000,000</p>
+                    <p>Budget: $${requestScope.film.budget},000,000</p>
+                    <p>Gross: $${requestScope.film.gross},000,000</p>
                 </div>
                 <div class="col-9" style="border-right: 1px solid black">
                     <h2>Synopsis</h2>
@@ -67,7 +67,5 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="jquery/jquery.js"></script>
     </body>
 </html>

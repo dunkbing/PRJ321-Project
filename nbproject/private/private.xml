@@ -3,15 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/NetbeansProject/Project/web/html/navbar.jsp</file>
+            <file>file:/D:/NetbeansProject/Project/src/java/controller/Logout.java</file>
+            <file>file:/D:/NetbeansProject/Project/src/java/controller/Register.java</file>
             <file>file:/D:/NetbeansProject/Project/src/java/controller/FilmServlet.java</file>
-            <file>file:/D:/NetbeansProject/Project/src/java/entity/Review.java</file>
-            <file>file:/D:/NetbeansProject/Project/src/java/controller/FilmListController.java</file>
-            <file>file:/D:/NetbeansProject/Project/web/html/home.jsp</file>
             <file>file:/D:/NetbeansProject/Project/src/java/dal/FilmDAO.java</file>
+            <file>file:/D:/NetbeansProject/Project/src/java/controller/Login.java</file>
             <file>file:/D:/NetbeansProject/Project/src/java/controller/SearchServlet.java</file>
+            <file>file:/D:/NetbeansProject/Project/src/java/dal/AccountDAO.java</file>
+            <file>file:/D:/NetbeansProject/Project/web/html/navbar.jsp</file>
+            <file>file:/D:/NetbeansProject/Project/src/java/utility/Message.java</file>
+            <file>file:/D:/NetbeansProject/Project/src/java/controller/FilmListController.java</file>
+            <file>file:/D:/NetbeansProject/Project/src/java/entity/Account.java</file>
+            <file>file:/D:/NetbeansProject/Project/web/html/home.jsp</file>
+            <file>file:/D:/NetbeansProject/Project/web/html/login.jsp</file>
             <file>file:/D:/NetbeansProject/Project/web/html/film.jsp</file>
-            <file>file:/D:/NetbeansProject/Project/src/java/entity/Film.java</file>
+            <file>file:/D:/NetbeansProject/Project/web/html/register.jsp</file>
         </group>
     </open-files>
 </project-private>

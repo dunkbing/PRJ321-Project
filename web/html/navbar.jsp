@@ -4,6 +4,7 @@
     Author     : dangb
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="entity.Film"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -15,6 +16,7 @@
     }
     
 %>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="images/logo.png" style="height:95px !important;"></a>
@@ -50,12 +52,24 @@
             </ul>
             <div class="ml-auto">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.jsp"><i class="fas fa-edit mr-1"></i>Sign up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.jsp"><i class="fas fa-user-plus mr-1"></i>Sign in</a>
-                    </li>
+                <c:choose>
+                    <c:when test="${currentAccount != null}">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">${currentAccount.username}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Logout">Dang xuat</a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Register"><i class="fas fa-edit mr-1"></i>Dang ky</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Login"><i class="fas fa-user-plus mr-1"></i>Dang nhap</a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
                 </ul>
             </div>
             <form class="form-inline my-2 my-lg-0">
@@ -69,6 +83,8 @@
 </nav>
 <div class="row">
     <div class="col-1"></div>
-    <div class="col" style="margin-left: 60px; border-bottom: 1px solid black"><%=f2!=null?f2.getTitle():"welcome"%></div>
+    <div class="col" style="margin-left: 60px; border-bottom: 1px solid black">${film!=null ? film.title:"welcome"}</div>
     <div class="col-1"></div>
 </div>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="jquery/jquery.js"></script>

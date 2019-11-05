@@ -5,24 +5,23 @@
  */
 package controller;
 
-import dal.FilmDAO;
+import dal.AccountDAO;
 import entity.Account;
-import entity.Film;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import utility.Message;
 
 /**
  *
  * @author dangb
  */
-@WebServlet(name = "FilmListController", urlPatterns = {"/FilmList"})
-public class FilmListController extends HttpServlet {
+@WebServlet(name = "Register", urlPatterns = {"/Register"})
+public class Register extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,11 +35,19 @@ public class FilmListController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        FilmDAO filmDAO = new FilmDAO();
-        List<Film> films = filmDAO.getFilmList("select top 4 * from film");
-        request.setAttribute("currentAccount", (Account)request.getAttribute("currentAccount"));
-        request.setAttribute("filmlist", films);
-        request.getRequestDispatcher("html/home.jsp").forward(request, response);
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        if(username!=null && password!=null && email!=null){
+            Account a = new Account();
+            a.setEmail(email);
+            a.setUsername(username);
+            a.setPassword(password);
+            AccountDAO accountDAO = new AccountDAO();
+            accountDAO.register(a);
+            request.setAttribute("message", Message.REGISTER_SUCCESS);
+            request.getRequestDispatcher("html/register.jsp").forward(request, response);
+        } else request.getRequestDispatcher("html/register.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
