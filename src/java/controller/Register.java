@@ -48,6 +48,7 @@ public class Register extends HttpServlet {
             request.setAttribute("message", Message.REGISTER_SUCCESS);
             request.getRequestDispatcher("html/register.jsp").forward(request, response);
         } else request.getRequestDispatcher("html/register.jsp").forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
